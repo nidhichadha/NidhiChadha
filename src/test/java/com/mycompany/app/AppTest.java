@@ -45,4 +45,17 @@ public class AppTest
         System.setOut(null);
     }
 
-}
+  // find length of string
+  public void testTextLength()
+  {
+      App.main(null);
+      try {
+          assertTrue(outContent.toString().length() <= 10);
+      } catch (AssertionError e) {
+          fail("\"message\" is too long - maximum length 10 characters - current length: "+outContent.toString().length());
+      }
+  }
+        }
+
+
+
